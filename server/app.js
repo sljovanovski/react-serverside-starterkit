@@ -23,11 +23,10 @@ app.use(morgan('combined'))
 const index = require('./routes/index')
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, '..', 'build')))
-
+app.use('/', index)
 
 const api = require('./routes/api')
 app.use('/api', api)
-app.use('/', index)
 
 // Always return the main index.html, so react-router render the route in the client
 const universalLoader = require('./universal')
