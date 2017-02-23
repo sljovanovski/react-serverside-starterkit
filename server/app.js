@@ -12,8 +12,6 @@ const app = express()
 
 // Support Gzip
 app.use(compression())
-// Serve static assets
-app.use(express.static(path.resolve(__dirname, '..', 'build')))
 
 // Suport post requests with body data (doesn't support multipart, use multer)
 app.use(bodyParser.json())
@@ -24,6 +22,9 @@ app.use(morgan('combined'))
 
 const index = require('./routes/index')
 app.use('/', index)
+
+// Serve static assets
+app.use(express.static(path.resolve(__dirname, '..', 'build')))
 
 const api = require('./routes/api')
 app.use('/api', api)
