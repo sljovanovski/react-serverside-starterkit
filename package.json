@@ -49,6 +49,7 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "babel-preset-react-app": "^2.1.0",
     "babel-register": "^6.23.0",
     "body-parser": "^1.16.1",
     "compression": "^1.6.2",
