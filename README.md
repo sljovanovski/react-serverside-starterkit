@@ -1,4 +1,4 @@
-Server Side Rendering with Create React App
+React Server Side Rendering
 ===========================================
 
 Included: redux, react-router
